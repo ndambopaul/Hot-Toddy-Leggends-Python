@@ -1,0 +1,10 @@
+# Part 1:
+  - using the suitable data types, create 4 variables named: country, population, temperature and capital city. Assign values to the variables.
+  - Create two numerical variables with values, then perform the following arithmetic operations on them: addition, subtraction, multiplication, squaring and power.
+
+# Part 2:
+  - create two numerical variables and perform the following comparisons: greater than and not greater than
+  - create two string variables and perform the following comparisons: equals to and not equals to
+
+# Part 3:
+  - Create a small program that requires the user to enter the following information: name, course, school fees and age. print all of them
