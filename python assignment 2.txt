@@ -1,0 +1,19 @@
+# Part 1:
+Create a simple python that allows users to register for an event:
+Steps:
+  - When the program is ran, it should print a welcome message something like: Welcome to PyCon 2024 Nairobi (Just put any message you want).
+  - Second, the program asks the person for: name, phone_number, gender and ticket_number.
+  - The finally, the program, prints out a message that says: Welcome <name of person> to <your event name>
+
+# Part 2:
+    - Create a calculator program using the following steps.
+    - The program asks the user for the first number.
+    - The program asks the user for the arithmetic operator, e.g: +, -, * etc..
+    - The program asks the user for the second number.
+    - Then create a variable with is a result of the two numbers based on the arithmetic operator.
+    - Then print the result variable.
+    Note: When you are getting inputs from users, they are captured as strings so remember to convert them to either integers or floats.
+
+# Part 3:
+    - Using if statements, comparisons and logical operators, implement the KCSE grading system.
+    - The marks used in the grading system should be entered as an input by the user.
