@@ -1,0 +1,20 @@
+# Step 1:
+1. Create a list named cars with 3 string elements.
+2. Create a list named salaries with 4 numerical elements.
+3. Create a list called netflix_statuses which contains 4 boolean elements.
+4. Print the second element in salaries list.
+5. print all elements from index 0 to 2 in the salaries list.
+6. Print the last element in the salaries list.
+
+# Step 2
+1. Create a list named groceries with five items.
+2. Add a new item at the end of the list.
+3. Add a new item at index 3.
+4. Remove the last element from the list.
+5. Remove the element at index 4.
+4. create a new variable named list_length and assign it to the length of the groceries list.
+
+# Step 3:
+1. Create an empty list named odd_numbers
+2. Using a for loop and the range function, add all odd numbers between 3 and 33 to the list.
+3. Print all the even numbers from 5 to 37.
