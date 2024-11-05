@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Provider Profiles</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+</head>
+<body>
+  <header class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold mb-2">Our Service Providers</h1>
+      <div class="flex justify-between items-center">
+        <p class="text-lg">Browse our selection of experienced event partners.</p>
+        <div>
+          <label for="filter-by" class="mr-2 text-gray-300">Filter by:</label>
+          <select id="filter-by" class="bg-gray-800 text-white px-3 py-2 rounded">
+            <option value="">All</option>
+            <option value="professional">Professional</option>
+            <option value="experienced">Experienced</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-gray-100 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="provider-grid">
+          <div class="bg-white rounded-lg shadow-md p-6" data-provider-type="professional">
+            <img src="/api/placeholder/400/400" alt="Provider 1" class="rounded-full w-24 h-24 mb-4">
+            <h3 class="text-xl font-bold mb-2">Jane Doe</h3>
+            <p class="text-gray-500 mb-4">Professional Event Partner</p>
+            <p>Jane has years of experience attending events and is known for her poise and charm. She'll ensure you make a lasting impression.</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+              Hire Jane
+            </button>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6" data-provider-type="experienced">
+            <img src="/api/placeholder/400/400" alt="Provider 2" class="rounded-full w-24 h-24 mb-4">
+            <h3 class="text-xl font-bold mb-2">John Smith</h3>
+            <p class="text-gray-500 mb-4">Experienced Event Companion</p>
+            <p>John's extensive knowledge of event etiquette makes him the perfect partner to help you navigate any occasion.</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+              Hire John
+            </button>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6" data-provider-type="professional">
+            <img src="/api/placeholder/400/400" alt="Provider 3" class="rounded-full w-24 h-24 mb-4">
+            <h3 class="text-xl font-bold mb-2">Emily Johnson</h3>
+            <p class="text-gray-500 mb-4">Professional Event Partner</p>
+            <p>Emily's poise and professionalism will ensure you make a lasting impression at your next event.</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+              Hire Emily
+            </button>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6" data-provider-type="experienced">
+            <img src="/api/placeholder/400/400" alt="Provider 4" class="rounded-full w-24 h-24 mb-4">
+            <h3 class="text-xl font-bold mb-2">Michael Brown</h3>
+            <p class="text-gray-500 mb-4">Experienced Companion</p>
+            <p>Michael's versatility and adaptability make him a great fit for a wide range of events and occasions.</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+              Hire Michael
+            </button>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6" data-provider-type="professional">
+            <img src="/api/placeholder/400/400" alt="Provider 5" class="rounded-full w-24 h-24 mb-4">
+            <h3 class="text-xl font-bold mb-2">Sarah Lee</h3>
+            <p class="text-gray-500 mb-4">Professional Event Partner</p>
+            <p>Sarah's experience and personable nature will make her a valuable addition to any event you attend.</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+              Hire Sarah
+            </button>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6" data-provider-type="experienced">
+            <img src="/api/placeholder/400/400" alt="Provider 6" class="rounded-full w-24 h-24 mb-4">
+            <h3 class="text-xl font-bold mb-2">David Kim</h3>
+            <p class="text-gray-500 mb-4">Experienced Event Companion</p>
+            <p>David's extensive knowledge of event etiquette and social norms will ensure you feel confident and at ease.</p>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4">
+              Hire David
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Event Partner Hiring Service. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('filter-by').addEventListener('change', function() {
+      var filterType = this.value;
+      var providerGrid = document.getElementById('provider-grid');
+      var providers = providerGrid.getElementsByClassName('bg-white');
+
+      for (var i = 0; i < providers.length; i++) {
+        var provider = providers[i];
+        if (filterType === '' || provider.dataset.providerType === filterType) {
+          provider.style.display = 'block';
+        } else {
+          provider.style.display = 'none';
+        }
+      }
+    });
+  </script>

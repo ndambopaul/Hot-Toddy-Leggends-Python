@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Developer Course</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #0f172a;
+            --accent: #06b6d4;
+            --text: #334155;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(45deg, var(--secondary), var(--primary-dark));
+            min-height: 600px;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: radial-gradient(circle at 70% 30%, var(--accent) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            color: #e2e8f0;
+            margin-bottom: 40px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .section-description {
+            color: var(--text-light);
+            font-size: 1.125rem;
+        }
+
+        /* Module Cards */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .module-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .module-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .module-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--primary);
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .module-title {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured .price,
+        .pricing-card.featured .pricing-title {
+            color: var(--white);
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .price span {
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .feature-list li {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Instructor Cards */
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 48px;
+        }
+
+        .instructor-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .instructor-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+
+        .instructor-image::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .instructor-name {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .instructor-role {
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            background: var(--white);
+            border-radius: 24px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 48px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                min-height: 500px;
+                padding: 80px 0;
+            }
+
+            .header-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-grid {
+                gap: 24px;
+            }
+
+            .contact-section {
+                padding: 32px;
+                margin: 0 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">Master Backend Development</h1>
+                <p class="header-subtitle">Transform your career with our comprehensive backend development course. Learn from industry experts and build production-ready applications.</p>
+                <div style="display: flex; gap: 16px; justify-content: center;">
+                    <a href="#pricing" class="btn btn-primary">View Pricing</a>
+                    <a href="#contact" class="btn btn-outline">Request Info</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="modules">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Course Curriculum</h2>
+                <p class="section-description">Comprehensive modules designed to take you from basics to advanced backend development concepts</p>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-database fa-lg"></i>
+                    </div>
+                    <h3 class="module-title">Database Architecture</h3>
+                    <p>Master SQL and NoSQL databases, learn optimization techniques, and implement efficient data models for scalable applications.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-code fa-lg"></i>
+                    </div>
+                    <h3 class="module-title">API Development</h3>
+                    <p>Build robust RESTful APIs, implement GraphQL, and learn best practices for API security and documentation.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-shield-alt fa-lg"></i>
+                    </div>
+                    <h3 class="module-title">Security & Authentication</h3>
+                    <p>Implement secure user authentication, JWT, OAuth2, and learn about common security vulnerabilities and their prevention.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-cloud fa-lg"></i>
+                    </div>
+                    <h3 class="module-title">Cloud Infrastructure</h3>
+                    <p>Deploy applications on AWS, implement microservices, and learn about containerization with Docker and Kubernetes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Flexible Pricing Plans</h2>
+                <p class="section-description">Choose the plan that best fits your learning journey</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Standard</h3>
+                    <div class="price">$999<span>/one-time</span></div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 3 months course access</li>
+                        <li><i class="fas fa-check"></i> Course materials</li>
+                        <li><i class="fas fa-check"></i> Community access</li>
+                        <li><i class="fas fa-check"></i> Basic support</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">Professional</h3>
+                    <div class="price">$1,499<span>/one-time</span></div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 6 months course access</li>
+                        <li><i class="fas fa-check"></i> Premium course materials</li>
+                        <li><i class="fas fa-check"></i> Priority community access</li>
+                        <li><i class="fas fa-check"></i> 1-on-1 mentoring</li>
+                        <li><i class="fas fa-check"></i> Job placement assistance</li>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provider Profile - Jane Doe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex items-center">
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fas fa-arrow-left mr-2"></i>Back to Profiles
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Profile Header -->
+        <div class="bg-gray-900 text-white p-8">
+          <div class="flex flex-col md:flex-row items-center">
+            <img src="/api/placeholder/400/400" alt="Jane Doe" class="rounded-full w-32 h-32 md:w-48 md:h-48 mb-4 md:mb-0 md:mr-8">
+            <div>
+              <h1 class="text-4xl font-bold mb-2">Jane Doe</h1>
+              <p class="text-xl text-gray-300 mb-4">Professional Event Partner</p>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400 mr-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i>
+                </div>
+                <span class="text-gray-300">(4.5/5 from 28 events)</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-500 rounded-full text-sm">Corporate Events</span>
+                <span class="px-3 py-1 bg-blue-500 rounded-full text-sm">Weddings</span>
+                <span class="px-3 py-1 bg-blue-500 rounded-full text-sm">Social Gatherings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Column -->
+            <div class="md:col-span-2">
+              <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-700 mb-4">
+                  With over 5 years of experience as a professional event partner, I specialize in making sure you feel confident and comfortable at any event. My background in corporate communications and social etiquette allows me to navigate various social situations with ease and grace.
+                </p>
+                <p class="text-gray-700 mb-4">
+                  I'm well-versed in business etiquette, formal dining protocols, and social customs from various cultures. Whether it's a corporate function, wedding, or social gathering, I can help you make the right impression.
+                </p>
+              </section>
+
+              <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Experience & Skills</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                  <li>Corporate event etiquette specialist</li>
+                  <li>Formal dining and social protocol expert</li>
+                  <li>Multilingual (English, French, Spanish)</li>
+                  <li>Professional dancing skills for formal events</li>
+                  <li>Experience with international business customs</li>
+                </ul>
+              </section>
+
+              <section class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Recent Reviews</h2>
+                <div class="space-y-4">
+                  <div class="border-b pb-4">
+                    <div class="flex text-yellow-400 mb-2">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-2">"Jane was absolutely perfect for our corporate gala. Her professionalism and ability to engage with our clients was outstanding."</p>
+                    <p class="text-gray-500">- Michael R., Corporate Gala</p>
+                  </div>
+                  <div class="border-b pb-4">
+                    <div class="flex text-yellow-400 mb-2">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-2">"Excellent companion for our wedding. She helped make everything run smoothly and was a joy to work with."</p>
+                    <p class="text-gray-500">- Sarah T., Wedding</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="md:col-span-1">
+              <div class="bg-gray-100 rounded-lg p-6 sticky top-4">
+                <h3 class="text-xl font-bold mb-4">Booking Information</h3>
+                <div class="space-y-4">
+                  <div>
+                    <p class="text-gray-600 mb-1">Base Rate</p>
+                    <p class="text-2xl font-bold">$200/hour</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 mb-1">Availability</p>
+                    <p class="text-green-600 font-semibold">Available Next Week</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-600 mb-1">Event Types</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                      <li>Corporate Events</li>
+                      <li>Weddings</li>
+                      <li>Social Gatherings</li>
+                      <li>Formal Dinners</li>
+                    </ul>
+                  </div>
+                  <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded">
+                    Book Now
+                  </button>
+                  <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded">
+                    Message Jane
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Event Partner Hiring Service. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
