@@ -1,0 +1,59 @@
+Assignment on Lists, Tuples, Sets, and Dictionaries
+
+### Objective
+The objective of this assignment is to understand and practice the basic concepts of Python collections: lists, tuples, sets, and dictionaries.
+
+
+### Part 1: Lists
+1. Create a list of your five favorite fruits and:
+   - Print the entire list.
+   - Add a new fruit to the list.
+   - Remove the second fruit from the list.
+   - Sort the list in alphabetical order.
+   - Print the length of the list.
+
+2. Using list comprehension(This is optional, to solve it, research on something called list comprehension):
+   - Create a list of squares for numbers 1 to 10.
+   - Print the newly created list.
+
+
+
+### Part 2: Tuples
+1. Create a tuple containing the names of five cities you would like to visit and:
+   - Print the entire tuple.
+   - Attempt to change one of the cities in the tuple (observe what happens and add a comment explaining the behavior).
+   - Access and print the last city in the tuple using negative indexing.
+
+2. Unpack the tuple into individual variables and print each variable.
+
+
+### Part 3: Sets
+1. Create a set of your favorite book genres and:
+   - Print the entire set.
+   - Add a new genre to the set.
+   - Remove an existing genre from the set.
+   - Attempt to add a duplicate genre and explain what happens (using a comment).
+
+2. Demonstrate the use of set operations:
+   - Create another set with genres you want to explore.
+   - Find and print the union and intersection of the two sets.
+
+
+
+### Part 4: Dictionaries
+1. Create a dictionary that holds information about you, with keys like "name", "age", "city", and "hobbies". Then:
+   - Print the entire dictionary.
+   - Add a new key-value pair for "favorite_color".
+   - Update your age to be one year older.
+   - Remove the "city" key from the dictionary.
+   - Use a loop to print each key-value pair in the dictionary.
+
+2. Create a dictionary that maps numbers 1 to 5 to their corresponding words (e.g., {1: "one", 2: "two", ...}).
+   - Access and print the word corresponding to the number 3.
+   - Use a dictionary comprehension to create a new dictionary that maps numbers 1 to 10 to their squares.
+
+
+
+### Submission
+- Name your file `collections_assignment.py`.
+- Make sure your code is well-organized and easy to read.
