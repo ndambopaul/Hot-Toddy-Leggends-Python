@@ -1,0 +1,45 @@
+**Assignment on Functions in Python**
+
+### Part 1: Basic Function Definitions
+1. Greet Function 
+   Write a function called `greet` that:
+   - Takes one parameter: `name`.
+   - Prints a greeting message, such as "Hello, [name]!"
+
+   Example:
+   greet("Alice")
+   # Output: Hello, Alice!
+  
+
+2. Rectangle Area Function
+   Write a function called `calculate_rectangle_area` that:
+   - Takes two parameters: `width` and `height`.
+   - Returns the area of the rectangle.
+
+   Example:
+   area = calculate_rectangle_area(5, 10)
+   print(area)  # Output: 50
+   
+
+### Part 2: Functions with Default Parameters
+1. Power Function  
+   Write a function called `power` that:
+   - Takes two parameters: `base` and `exponent`, where `exponent` should have a default value of 2.
+   - Returns the result of raising `base` to the power of `exponent`.
+
+   Example:
+   print(power(5))       # Output: 25
+   print(power(2, 3))    # Output: 8
+  
+
+### Part 3: Functions with Multiple Returns
+1. Circle Calculations Function  
+   Write a function called `circle_calculations` that:
+   - Takes one parameter: `radius`.
+   - Returns both the area and the circumference of the circle (use π = 3.14159 for calculations).
+
+   Example:
+   area, circumference = circle_calculations(7)
+   print(f"Area: {area}, Circumference: {circumference}")
+   
+
